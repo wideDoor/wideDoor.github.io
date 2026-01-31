@@ -1,0 +1,459 @@
+{
+  "selected_name": "김광문",
+  "summary": [
+    {
+      "title": "17년 차 백엔드 시니어 엔지니어 (2007.10 ~ 현재)"
+    },
+    {
+      "title": "MSA 기반 대규모 트래픽 처리 및 비동기 아키텍처 전문가",
+      "items": [
+        "1000 TPS 이상의 서비스 운영 경험 보유",
+        "WebMVC 기반 성능 개선 경험 다수 보유",
+        "Spring WebFlux, Kotlin Coroutine 활용 경험 보유",
+        "국내 최초 CPC 광고 시스템(11번가), 대규모 스트리밍(FLO), 티몬 검색 등 도메인 핵심 기술 구축"
+      ]
+    },
+    {
+      "title": "검색 엔진 활용 경험",
+      "items": [
+        "OpenSearch, Elasticsearch 등을 활용해 대규모 커머스 및 ADMIN 검색 기능 개발 경험",
+        "MongoDB의 자연어 검색 한계 및 인덱스 과다에 따른 API 성능 저하 문제를 해결하고, 유지보수가 불가능했던 기존 OCR 검색 솔루션을 OpenSearch 기반 자체 구축으로 대체하여 검색 품질과 운영 효율성 동시 달성"
+      ]
+    },
+    {
+      "title": "인프라 효율화",
+      "items": [
+        "배치 작업 개선에 따른 DB 리소스 최적화",
+        "gRPC 기반 HA 도입 등을 통한 시스템 안정성 확보 및 운영 비용 절감 달성"
+      ]
+    },
+    {
+      "title": "사내 Developer Award 다수 수상을 통한 검증된 기술 영향력 및 비즈니스 기여"
+    }
+  ],
+  "technical_skills": {
+    "Languages": "Java, Kotlin, Golang, Python, JavaScript",
+    "Frameworks / Library": "Spring Boot / WebFlux / WebMVC, Coroutine, gRPC, Resilience4J, Express.js 등",
+    "Data / Search": "OpenSearch, Elasticsearch, MongoDB, Redis(Valkey), MySQL, Oracle",
+    "Infrastructure": "Kafka, RabbitMQ, Zookeeper, AWS, Docker, Maven, Gradle 등"
+  },
+  "experiences": [
+    {
+      "info": {
+        "company": "드림어스컴퍼니",
+        "period": "2019.07 ~ 재직 중",
+        "role": "백엔드 개발",
+        "award": "🏆 Developer Award 5회 수상"
+      },
+      "task_groups": [
+        {
+          "title": "FLO 서비스를 위한 다수의 Feature 개발",
+          "items": [
+            "Bixby, NUGU, Google Home 등 서드파티 연동 API 개발 리딩",
+            "무제한 플레이리스트 추천 JUMP 서비스 개발 주도",
+            "이 곡 안듣기 / 내 취향 MIX / 홈 테마 큐레이션 / 댓글 서비스 개발",
+            "음원 메타 동기화 및 암/복호화 서비스 개발",
+            "최근 6개월 청취 로직 고도화 (청취 횟수 집계 방식 개선)",
+            "SKT API HUB, TID 연동 서비스 개발",
+            "Take Down 메타 사용자 데이터 보정 로직 개발",
+            "아티스트 상세 > 아티스트 별 앨범 / 곡 정보 조회 지원을 위한 검색 전용 데이터 구조 설계 및 개발",
+            "티켓 플랫폼 런칭 프로젝트 서버 유닛 리딩 및 핵심 API 구축",
+            "이외 다수의 기능 개발"
+          ]
+        },
+        {
+          "title": "아키텍처 개선",
+          "items": [
+            "Maven -> Gradle 전환 주도 / Meta API RDB -> MongoDB 전환 주도",
+            "ADMIN 검색 효율화 및 OCR 곡 검색 내재화를 위한 OpenSearch 도입 주도",
+            "RabbitMQ 병목 현상 해결을 위한 Kafka 기반 메시징 인프라 전환 주도",
+            "IDC to AWS Cloud 전환 대응 및 gRPC/ZooKeeper 기반 HA 도입",
+            "Spring WebMVC 기반 도메인을 WebFlux + Kotlin(Coroutine) 아키텍처 전환 주도",
+            "Spring Boot 2.1.x -> 3.5.4 업그레이드 주도",
+            "대기열 서비스 파일럿 프로젝트 리딩"
+          ]
+        },
+        {
+          "title": "서비스 운영",
+          "items": [
+            "팀내 API 설계 가이드 및 연간 30건 이상의 코드 리뷰 수행",
+            "다수 batch process 리소스 사용량 및 성능 개선",
+            "롤링 배포 시 직후 투입 API 서버 응답 지연 현상 해결",
+            "Resilience4J 전환 과정에서 발생한 Circuit 과다 Open 이슈 해결",
+            "gRPC latency 간헐적 튐 이슈 해결"
+          ]
+        }
+      ],
+      "achievement_groups": [
+        {
+          "title": "1. 검색 엔진 도입으로 인한 검색 효율성 향상",
+          "items": [
+            {
+              "text": "<strong>Admin 페이지 메타 검색:</strong> 평균 Latency 557ms → 52.7ms / 편차 15.0s → 73.7ms 안정화"
+            },
+            {
+              "text": "<strong>공개리스트 검색:</strong> 평균 Latency 3.5s → 90.6ms(38배↑), 최대 시간 29.5s → 329ms(89배↑)"
+            },
+            {
+              "text": "<strong>풀 색인 최적화:</strong> Scan Skip 방식 적용으로 색인 속도 2배 단축 (55분 → 25분)"
+            },
+            {
+              "text": "<strong>운영 비용 절감:</strong> 기존 OCR 검색 장비 c7g.16xlarge → r6g.large.search 5대 구성 변경"
+            }
+          ]
+        },
+        {
+          "title": "2. JVM gRPC API Library 개발에 따른 내부 API 통신 규격 일원화",
+          "items": [
+            {
+              "text": "<strong>gRPC 자바 클라이언트 / 서버 개발을 위한 공통 라이브러리</strong> 개발로 RPC 기반 기능 제공 효율화 유도"
+            },
+            {
+              "text": "암/복호화, CDN 이미지 업로더, 푸시 서비스, 카카오 알림톡 등 다수의 스텁 개발 지원"
+            },
+            {
+              "text": "기존 API 기반 암/복호화 서비스 -> gRPC 기반 개선: 평균 Latency 10~50ms → 10~30us 단축"
+            }
+          ]
+        },
+        {
+          "title": "3. DB 리소스 효율화",
+          "items": [
+            {
+              "text": "<strong>아티스트 상세 페이지 검색 데이터 집계 배치 개선:</strong>",
+              "sub_items": [
+                "CPU: 35~40% → 10~15%",
+                "QPS: 8.00K → 0.1K ops/s (98% 절감)",
+                "Update 빈도: 23K → 2K건/s (91% 절감)"
+              ]
+            },  
+            {
+              "text": "FLO -> SKT 검색 메타 데이터 전달 개선: CPU 최대 90% → 12~32% 절감"
+            },  
+            {
+              "text": "그외 다수의 DB 과부하 로직 개선에 따라 DB EC2 Instance 통합 및 / Scale Down 에 기여: r7i.4xlarge -> r7i.2xlarge"
+            }
+          ]
+        },
+        {
+          "title": "4. META Domain MongoDB 및 WebMVC -> non-blocking (WebFlux) 전환 주도",
+          "items": [
+            {
+              "text": "기존 도메인의 한계 RPS 향상",
+              "sub_items": [
+                "MongoDB 전환: 350 RPS -> 1050 RPS",
+                "non-blocking 전환: 900 RPS -> 2,250 RPS"
+              ]
+            },
+            {
+              "text": "스레드 사용량 감소로 내결합성 향상"
+            },
+            {
+              "text": "평균 레이턴시 30ms 이하로 개선"
+            }
+          ]
+        },
+        {
+          "title": "5. 다수의 운영 이슈 해결에 따른 서비스 안정성 향상 기여",
+          "items": [
+            {
+              "text": "Eureka 점진적 부하 주입 LB 개발 / Self Request 등의 WarmUp 라이브리리 개발에 따른 투입 직후의 레이턴시 밀림 현상 개선"
+            },
+            {
+              "text": "캐시 기반 API 적극 도입 및 공통화에 따른 API 레이턴시 감소에 기여"
+            },
+            {
+              "text": "Resilience4J Circuit 과 오픈 원인 분석 및 해결"
+            },
+            {
+              "text": "메타 API ETag 도입을 통한 Outbound 네트워크 비용 절감"
+            },
+            {
+              "text": "SBOM 도입 가이드를 통한 취약점 대응"
+            },
+            {
+              "text": "저연차 개발자의 설계 지원 및 다수 코드 리뷰 지원에 따른 서비스 안정성 향상에 기여해 Best Supporter 상 2회 수상"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "info": {
+        "company": "티몬 (TMON)",
+        "period": "2016.09 ~ 2018.12",
+        "role": "검색 개발",
+        "award": "🏆 Best 티모니언 1회 수상"
+      },
+      "task_groups": [
+        {
+          "title": "검색 서비스를 위한 다수의 Feature 개발",
+          "items": [
+             "통합 기획전 및 전략 필터 검색 API 개발",
+             "모바일 검색 2열뷰 조회 API 개발",
+             "검색어 자동완성 구조 및 기능 개선",
+             "TotalScore 기능 개발",
+             "가격비교 기능 개발"
+          ]
+        },
+        {
+          "title": "검색 서비스의 품질 및 안정화 향상",
+          "items": [
+            "통합 검색 풀 색인 배치 성능 개선",
+            "통합 검색 API 테스트 커버리지 개선",
+            "타임어택용 딜 색인을 위한 증분 색인 배치 개발",
+            "인기도 집계 배치 개선 등 검색 랭킹과 관련된 기능들을 고도화하여 검색 퀄리티를 향상"
+          ]
+        },
+        {
+          "title": "서비스 운영",
+          "items": [
+            "다수의 API 테스트 케이스 개발에 따른 개발 코드 안정성 향상"
+          ]
+        }
+      ],
+      "achievement_groups": [
+        {
+          "title": "1. 성능 개선",
+          "items": [
+            {
+              "text": "옵션 타이틀 정제 작업으로 색인 크기 감소",
+              "items": [
+                "기존 21.43 GB -> 17.14 GB (21% 절감)",
+                "검색 속도 평균 200ms -> 120ms (40% 향상)"
+              ]
+            },
+            {
+              "text": "통합 검색 풀 색인 배치 분산 처리 기능 개발로 색인 속도 향상에 기여, 29분 ~ 40분 -> 15분 ~ 24분"
+            },
+            {
+              "text": "검색 엔진의 과도한 Load Average를 개선해 서비스 장애 방지, 해당 작업들로 인해 Peak 시 평균 LoadAverage 12 ~ 15 -> 3 ~ 7로 격감, 평균 검색 속도 4.8초 -> 1.3초로 개선",
+              "items":[
+                "검색 부하도에 따른 cluster 분리를 통해 부하 분산",
+                "dedicated master node 도입",
+                "과한 CS 에 따른 Search / Get Thread Pool 조정",
+                "wildcard -> regexp 쿼리 개선",
+                "정렬 랭킹 가중치 적용 Elasticsearch plugin 개선 (ScriptSort 플러그인 사용 중지 처리)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "2. 검색 품질 및 비즈니스 성과",
+          "items": [
+            {
+              "text": "TotalScore (검색 정렬에 사용되는 전체 가중치 비율 적용기) function_score plugin 기능 개발에 따른 검색 유입 구매 매출 비중 4.3% 향상에 기여"
+            },
+            {
+              "text": "인기도 집계 성능: 6시간 → 10~15분 으로 단축"
+            },
+            {
+              "text": "자동완성 응답 속도 개선 : 기존 캐시 사용 42ms -> 캐시 미사용 21ms"
+            },
+            {
+              "text": "자동완성 한글 이외 문자 인식 오류 및 속도 저하 이슈해결, 이에 따라 자동완성 추천어 클릭률 23,881번으로 기존 17,701번 대비 13.26% 증가에 기여"
+            },
+            {
+              "text": "API 테스트 커버리지 향상 (51.5% → 65.5%)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "info": {
+        "company": "미라콤 (Miracom)",
+        "period": "2013.12 ~ 2016.05",
+        "role": "모바일팀 서버개발",
+        "award": "🏆 Java 자격 검증 1등상 수상"
+      },
+      "task_groups": [
+        {
+          "title": "삼성 Apps 검색 서비스 2.0 구축 및 운영",
+          "items": [
+            "Solr 버전 업그레이드(3.5 → 4.6) 및 커스텀 플러그인 Porting",
+            "검색 엔진 schema 빌드 & 배포 스크립트 개발",
+            "신규 서비스 API 개발 및 유지보수 / 전 API acceptance test case 개발"
+          ]
+        }
+      ],
+      "achievement_groups": [
+        {
+          "title": "성과 지표",
+          "items": [
+            {
+              "text": "schema 배포 스크립트 개선으로 코어 추가 시 3시간 이상 걸리던 작업을 10분 내외로 단축"
+            },
+            {
+              "text": "API 인수인계 원활한 대응을 통한 유지보수 인건비 절감 기여"
+            },
+            {
+              "text": "Schema 배포 자동화: 3시간 → 10분 단축"
+            },
+            {
+              "text": "즉각적 장애 처리, Acceptance Test Case 개발 및 보완에 따른 무장애 운영에 기여 (장애 미발생 1년 4개월)"
+            },
+            {
+              "text": "Node.js용 Solr, Redis, DB Connection Pool 개발로 평균 사용 소켓 수 25,000 여개 -> 1,900 여개로 줄여 CPU 사용률 15% 절감"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "info": {
+        "company": "11번가",
+        "period": "2011.06 ~ 2013.03",
+        "role": "광고 기능 개발",
+        "award": ""
+      },
+      "task_groups": [
+        {
+          "title": "광고 패키지 신설 및 전환 통계 개선",
+          "items": [
+            "미니몰 광고 패키지 구매/연장 프로세스",
+            "동영상 리스팅 광고/동영상 연동 API 개발",
+            "광고 전환율 데이터 집계 프로세스 개발"
+          ]
+        },
+        {
+          "title": "클릭 플러스 광고 시스템 신설 및 고도화",
+          "items": [
+            "CPC 광고 업계 최초 런칭을 위한 신규 광고 시스템 도입",
+            "입찰, 과금, 간편, 예약 입찰 프로세스 개발",
+            "광고 입찰, 변경 U/I 개발 / 사전 검수 BackOffice 개발",
+            "F/E 클릭 플러스 광고 노출 영역 개발"
+          ]
+        },
+        {
+          "title": "광고 센터 고도화",
+          "items": [
+            "입찰가 변경 API 및 리스팅 광고 기간 연장 API 개발",
+            "광고 센터 전 API Server Side Validation 강화",
+            "코드 테스트 커버리지 개선 및 광고 센터 GNB 개선"
+          ]
+        }
+      ],
+      "achievement_groups": [
+        {
+          "title": "1. 시스템 혁신 및 자동화",
+          "items": [
+            {
+              "text": "업계 최초 CPC 광고 시스템 안정적 런칭 및 과금 장애 해결"
+            },
+            {
+              "text": "자동 재 입찰 기능: Stored Procedure 활용, 1일 1회 21개 테이블 대상 마이그레이션 배치 구축"
+            },
+            {
+              "text": "Tracking 로그 Push Script 모듈 개발로 <strong>개발 공수 단축</strong> 기여"
+            }
+          ]
+        },
+        {
+          "text": "2. 보안 및 품질 향상",
+          "items": [
+            {
+              "text": "Validation 로직 강화로 데이터 변조 가능성 차단"
+            },
+            {
+              "text": "테스트 커버리지 54% → 70% 향상"
+            },
+            {
+              "text": "광고 전환율 리포팅 정확도 향상을 통한 <strong>매출 상승 기여</strong>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "info": {
+        "company": "사이넷 (PSYNET)",
+        "period": "2010.03 ~ 2011.04",
+        "role": "SI 개발",
+        "award": ""
+      },
+      "task_groups": [
+        {
+          "title": "고객사 각종 SI 업무 개발 (쇼핑 SNS, LiveScore 등)",
+          "items": [
+            "쇼핑 SNS 'WeScore' 신설: 평, 메모, 스타, 팬 관련 프로세스 개발",
+            "경험치 증가, 레벨업, 어뷰징 방지 프로세스 개발",
+            "LiveScore App 개발 및 KT 모바일 상품권 발송 시스템 개발",
+            "BlackBerry A/S 관리 서비스 API 개발 (TCP 연계)",
+            "안드로이드 App (Client) 개발 및 BackOffice Page 개발",
+            "암/복호화, 로깅 등 공통 기능 개발",
+            "소켓 통신 기반 전문 송/수신 모듈 개발"
+          ]
+        }
+      ],
+      "achievement_groups": [
+        {
+          "title": "1. 기술 리딩 및 생산성 향상",
+          "items": [
+            {
+              "text": "Spring/iBatis 활용 BackOffice 초기 구조 설계 주도"
+            },
+            {
+              "text": "기존 10년 차 프리랜서 2인 업무를 1인이 단독 수행하여 <strong>인건비 절감 및 신뢰도 확보</strong>"
+            },
+            {
+              "text": "LiveScore: App 개발 경험 전무한 상태에서 기한 내 런칭 완료"
+            }
+          ]
+        },
+        {
+          "title": "2. 비즈니스 성과",
+          "items": [
+            {
+              "text": "고객사 요구사항의 성실한 대응으로 <strong>정직원 스카우트 제의</strong> 수령"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "info": {
+        "company": "비투비인터넷",
+        "period": "2007.10 ~ 2010.01",
+        "role": "SI 개발자",
+        "award": ""
+      },
+      "task_groups": [
+        {
+          "title": "기업용 비즈니스 솔루션 구축 (G-ERP, e-L/C 등)",
+          "items": [
+            "전자 어음 수신 시스템 구축 및 JP2 어음 이미지 확인용 Admin 개발",
+            "KSD 주식 정보 관리 Admin 개발",
+            "삼성전자 G-ERP TRANSPRO ASP 웹 운영",
+            "전자무역서비스 3차 e-L/C 구축: 사용자/결재라인/권한 관리 등 비즈니스 로직 설계",
+            "소켓 통신 기반 전문 수신 및 암/복호화 알고리즘 모듈 개발",
+            "UML 작성 및 신용장 통지 업무 웹 페이지 개발",
+            "물류/무역 문서 변환 처리를 위한 XLS 기반 웹페이지 및 문서 송신 모듈 개발",
+            "SAP JCO를 사용한 승인 내역 조회 모듈 개발"
+          ]
+        }
+      ],
+      "achievement_groups": [
+        {
+          "title": "1. 개발 효율 및 품질 개선",
+          "items": [
+            {
+              "text": "공통 XHR 전송 모듈 개발로 <strong>비동기 로직 구현의 편의성</strong> 제공"
+            },
+            {
+              "text": "XLS 기반 문서 변환 처리 모듈 개발로 <strong>문서 처리 자동화</strong>"
+            }
+          ]
+        },
+        {
+          "title": "2. 고객 만족 및 사업 기여",
+          "items": [
+            {
+              "text": "KSD 주식 정보 관리 Admin 개발 성과 만족으로 <strong>차기 프로젝트 재계약</strong> 달성 기여"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
