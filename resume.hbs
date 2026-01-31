@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>경력기술서 ({{selected_name}})</title>
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; color: #333; max-width: 1100px; margin: 20px auto; padding: 20px; }
+        h1 { border-bottom: 2px solid #444; padding-bottom: 10px; color: #2c3e50; text-align: center; }
+        h2 { background: #f4f4f4; padding: 10px; border-left: 5px solid #2c3e50; margin-top: 30px; font-size: 1.2em; }
+        .summary-box { background: #f9f9f9; padding: 25px; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 30px; }
+        .summary-header { border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 15px; font-size: 1.4em; font-weight: bold; background: #eee; padding: 10px 15px; }
+        ul { list-style-type: disc; padding-left: 25px; margin: 10px 0; }
+        ul ul { list-style-type: circle; padding-left: 20px; margin: 5px 0; }
+        li { margin-bottom: 6px; font-size: 0.95em; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; table-layout: fixed; }
+        th, td { border: 1px solid #ccc; padding: 12px; vertical-align: top; }
+        th { background-color: #f2f2f2; font-weight: bold; text-align: center; }
+        .company-info { font-weight: bold; color: #2c3e50; font-size: 1.1em; display: block; }
+        .period { color: #7f8c8d; font-size: 0.85em; display: block; margin-top: 5px; }
+        .award-badge { display: inline-block; background: #fff3cd; color: #856404; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 0.85em; border: 1px solid #ffeeba; margin-top: 8px; }
+        .group-title { font-size: 1.0em; font-weight: bold; color: #d35400; display: block; margin-top: 12px; margin-bottom: 5px; border-bottom: 1px dashed #ddd; }
+        .achievement-header { font-size: 1.0em; font-weight: bold; color: #333; display: block; margin-top: 15px; }
+        .metric { font-weight: bold; color: #c0392b; }
+        li { 
+            margin-bottom: 4px; 
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        .metric { 
+            font-weight: bold; 
+            color: #c0392b; 
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <h1>경 력 기 술 서</h1>
+    <div class="summary-box">
+        <div class="summary-header">요약 (Summary)</div>
+        <ul>
+            {{#each summary}}
+            <li><strong>{{{title}}}</strong>
+                {{#if items}}<ul>{{#each items}}<li>{{this}}</li>{{/each}}</ul>{{/if}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <h2>Technical Skills</h2>
+    <table>
+        <colgroup><col style="width: 20%;"><col style="width: 80%;"></colgroup>
+        {{#each technical_skills}}
+        <tr><th>{{@key}}</th><td>{{this}}</td></tr>
+        {{/each}}
+    </table>
+    <h2>직무 경험 및 주요 성과</h2>
+    <table>
+        <colgroup><col style="width: 15%;"><col style="width: 42%;"><col style="width: 43%;"></colgroup>
+        <thead><tr><th>회사 및 기간</th><th>직무 경험</th><th>주요 성과</th></tr></thead>
+        <tbody>
+            {{#each experiences}}
+            <tr>
+                <td>
+                    <span class="company-info">{{info.company}}</span>
+                    <span class="period">{{info.period}}</span>
+                    {{info.role}}
+                    {{#if info.award}}<div class="award-badge">{{info.award}}</div>{{/if}}
+                </td>
+                <td>
+                    {{#each task_groups}}
+                    <span class="group-title">{{title}}</span>
+                    <ul>{{#each items}}<li>{{this}}</li>{{/each}}</ul>
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each achievement_groups}}
+                    <span class="achievement-header">{{title}}</span>
+                    <ul>
+                        {{#each items}}
+                        <li>
+                            {{{text}}}
+                            {{#if sub_items}}
+                                <ul>{{#each sub_items}}<li>{{{this}}}</li>{{/each}}</ul>
+                            {{/if}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{/each}}
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>
